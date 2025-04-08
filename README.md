@@ -3,9 +3,9 @@
 
 pages to make:
 - home: Max
-- search
+- search Caleb
 - profile
 - admin
 - cart: Max
-- login
-- signup
+- login Caleb
+- signup Caleb
