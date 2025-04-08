@@ -1,7 +1,7 @@
 # csc326_library_final
 
 
-pages to make:
+pages to make before April 15th:
 - home: Max
 - search Caleb
 - profile
