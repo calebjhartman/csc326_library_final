@@ -2,10 +2,10 @@
 
 
 pages to make:
-- home
+- home: Max
 - search
 - profile
 - admin
-- cart
+- cart: Max
 - login
 - signup
