@@ -4,8 +4,8 @@
 pages to make before April 15th:
 - home: Max
 - search Caleb
-- profile
-- admin
+- profile: Nicky
+- admin: Nicky
 - cart: Max
 - login Caleb
 - signup Caleb
