@@ -1,0 +1,113 @@
+/* OVERALL */
+
+body {
+  background-color: rgb(201, 200, 200);
+  margin: 5px;
+}
+
+
+/* HEADER BUTTONS */
+.btn.group button {
+  background-color: #b45f06; /* Green background */
+  border: 1px solid black; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  position: relative;
+  left: 76%;
+  font-size: 25px;
+
+}
+
+.btn.group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+/* set the rounded boarders of the buttons by adjusting the left-most and right-most */
+.btn.group button:nth-child(3) {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.btn.group button:nth-child(1) {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/* make sure the floats to the right side work as intended*/
+.btn.group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* background hover */
+.btn button:hover {
+  background-color: #9f5505;
+}
+
+
+/* HEADER TEXT */
+
+
+.login h1 {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  
+}
+
+
+/* the submit button */
+.login button {
+  background-color: #b45f06; 
+  border: 1px solid black; 
+  border-radius: 5px;
+  color: white; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  font-size: 20px;
+
+  display: block;           
+  margin: 20px auto 0 auto;
+  width: 75%;
+ 
+}
+
+.login button:hover {
+  background-color: #9f5505;
+}
+
+/* the username/pword */
+
+.login.container {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 100px;
+
+  box-shadow: 10px 10px 0px 1px #b45f06;
+}
+
+.login.input {
+  margin-bottom: 10%;
+}
+
+.login.input.username input, .login.input.password input {
+    color: #979797;
+    height: 28px;
+    padding-left: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+
+    border: 0; /* so no border actually shows - just to round the text input */
+    width: 200px;
+  
+}
+
