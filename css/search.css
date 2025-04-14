@@ -1,0 +1,47 @@
+/* OVERALL */
+
+body {
+    background-color: rgb(237, 233, 233);
+    margin: 5px;
+  }
+  
+  
+  /* HEADER BUTTONS */
+  .btn.group button {
+    background-color: #b45f06; 
+    border: 1px solid black; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; /* Float the buttons side by side */
+    position: relative;
+    left: 76%;
+    font-size: 25px;
+  }
+  
+  .btn.group button:not(:last-child) {
+    border-right: none; /* stop double borders */
+  }
+  /* set the rounded boarders of the buttons by adjusting the left-most and right-most */
+  .btn.group button:nth-child(3) {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  
+  .btn.group button:nth-child(1) {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  
+  /* make sure the floats to the right side work as intended*/
+  .btn.group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* background hover */
+  .btn button:hover {
+    background-color: #9f5505;
+  }
+  

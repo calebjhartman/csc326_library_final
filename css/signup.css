@@ -1,7 +1,7 @@
 /* OVERALL */
 
 body {
-  background-color: rgb(201, 200, 200);
+  background-color: rgb(237, 233, 233);
   margin: 5px;
 }
 
@@ -49,7 +49,7 @@ body {
 /* HEADER TEXT */
 
 
-.login h1 {
+.signup h1 {
   width: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -59,7 +59,7 @@ body {
 
 
 /* the submit button */
-.login button {
+.signup button {
   background-color: #b45f06; 
   border: 1px solid black; 
   border-radius: 5px;
@@ -74,13 +74,13 @@ body {
  
 }
 
-.login button:hover {
+.signup button:hover {
   background-color: #9f5505;
 }
 
 /* the username/pword */
 
-.login.container {
+.signup.container {
   width: 25%;
   margin-left: auto;
   margin-right: auto;
@@ -94,22 +94,23 @@ body {
   box-shadow: 10px 10px 0px 1px #b45f06;
 }
 
-.login.input {
+.signup.input {
   margin-bottom: 10%;
 }
 
-.login.input input {
+.signup.input input {
     color: #979797;
     height: 28px;
     padding-left: 10px;
     text-decoration: none;
     border-radius: 5px;
 
-    border: 0; /* so no border actually shows - just to round the text input */
-    width: 200px;
+    border: 1px solid black; /* so no border actually shows - just to round the text input */
+    width: 175px;
   
 }
 
-.login.input #zip {
+.signup.input #zip {
   width: 100px;
 }
+
