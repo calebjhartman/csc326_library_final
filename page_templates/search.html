@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/signup.css" /> 
+    <link rel="stylesheet" type="text/css" href="../css/search.css" /> 
 </head>
 <html lang="en">
     <body>
@@ -12,5 +12,137 @@
                 <button>Cart</button>
             </div>
         </header>
-    </body>
+    
+    <main id = "container">
+        <h1 id="search_header">Search</h1>
+        <div id = "search_container">
+            <form method="get" action="https://www.randyconnolly.com/tests/process.php">
+                <div class = "search title">
+                    <select name="search_by" id="search_by" style="height: 30px;">
+                        <option value = "title" selected="selected">Title</option>
+                        <option value = "author">Author</option>
+                    </select>
+                </div>
+                <div class = "search input" id = "search_input">     
+                    <input type="text" placeholder="Search Here" name="search_input" required>
+                </div>
+                <div class = "search type">
+                    <select name="type" id="index[]" size = 4 multiple>
+                        <option value = "0" selected="selected">All</option>
+                        <option value = "1">Textbooks</option>
+                        <option value = "2">eTextbooks</option>
+                        <option value = "3">Reference</option>
+                    </select>
+                </div>
+                <div class = "search genre">
+                    <select name="genre" id="genre" size = 5 multiple>
+                        <option value = "all" selected="selected">All</option>
+                        <option value = "fiction">Fiction</option>
+                        <option value = "nonfiction">Non-Fiction</option>
+                        <option value = "scifi">Sci-Fi</option>
+                        <option value = "fantasy">Fantasy</option>
+                    </select>
+                </div>
+                <button class = "search submit" type="submit">Search</button>
+
+            </form>
+        </div>
+        <div id = "books_container">
+
+            <div class = "book" id = "book_id">
+                <div class = "book plus">
+                    <img src="https://cdn-icons-png.flaticon.com/512/32/32360.png">
+                </div>
+
+                <div class = "book image" id = "test">
+                    <img src="https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1200">
+                    <figcaption class = "book image caption" style = "color: green;">Available</figcaption>
+                </div>
+
+                <div class = "book info">
+                    <div class = "book info top">
+                        <span class = "book info title"><b>Book Title</b></span>
+                        <span class = "book info author">Author</span>
+                    </div>
+                    <span class = "book info type">Book Type</span>
+                </div>  
+                <div class="book info summary">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+
+                </div>
+            </div>
+
+            <div class = "book" id = "book_id">
+                <div class = "book plus">
+                    <img src="https://cdn-icons-png.flaticon.com/512/32/32360.png">
+                </div>
+
+                <div class = "book image" id = "test">
+                    <img src="https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1200">
+                    <figcaption class = "book image caption" style = "color: green;">Available</figcaption>
+                </div>
+
+                <div class = "book info">
+                    <div class = "book info top">
+                        <span class = "book info title"><b>Book Title</b></span>
+                        <span class = "book info author">Author</span>
+                    </div>
+                    <span class = "book info type">Book Type</span>
+                </div>  
+                <div class="book info summary">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+
+                </div>
+            </div>
+
+            <div class = "book" id = "book_id">
+                <div class = "book plus">
+                    <img src="https://cdn-icons-png.flaticon.com/512/32/32360.png">
+                </div>
+
+                <div class = "book image" id = "test">
+                    <img src="https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1200">
+                    <figcaption class = "book image caption" style = "color: green;">Available</figcaption>
+                </div>
+
+                <div class = "book info">
+                    <div class = "book info top">
+                        <span class = "book info title"><b>Book Title</b></span>
+                        <span class = "book info author">Author</span>
+                    </div>
+                    <span class = "book info type">Book Type</span>
+                </div>  
+                <div class="book info summary">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+
+                </div>
+            </div>
+
+            <div class = "book" id = "book_id">
+                <div class = "book plus">
+                    <img src="https://cdn-icons-png.flaticon.com/512/32/32360.png">
+                </div>
+
+                <div class = "book image" id = "test">
+                    <img src="https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1200">
+                    <figcaption class = "book image caption" style = "color: green;">Available</figcaption>
+                </div>
+
+                <div class = "book info">
+                    <div class = "book info top">
+                        <span class = "book info title"><b>Book Title</b></span>
+                        <span class = "book info author">Author</span>
+                    </div>
+                    <span class = "book info type">Book Type</span>
+                </div>  
+                <div class="book info summary">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+
+                </div>
+            </div>
+            
+
+        </div>
+    </main>
+</body>
 </html>

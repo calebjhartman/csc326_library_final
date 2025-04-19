@@ -1,27 +1,29 @@
 /* OVERALL */
 
 body {
-  background-color: rgb(201, 200, 200);
+  background-color: rgb(237, 233, 233);
   margin: 5px;
 }
 
 
-/* HEADER BUTTONS */
+.btn.group {
+  display: flex;
+  justify-content: flex-end; /* aligns buttons to the right */
+}
 .btn.group button {
   background-color: #b45f06; 
   border: 1px solid black; 
   color: white; 
   padding: 10px 24px; 
   cursor: pointer; 
-  float: left; /* Float the buttons side by side */
-  position: relative;
-  left: 76%;
-  font-size: 25px;
+
+  font-size: 20px;
 }
 
 .btn.group button:not(:last-child) {
   border-right: none; /* stop double borders */
 }
+
 /* set the rounded boarders of the buttons by adjusting the left-most and right-most */
 .btn.group button:nth-child(3) {
   border-top-right-radius: 3px;
@@ -41,7 +43,7 @@ body {
 }
 
 /* background hover */
-.btn button:hover {
+.btn button:hover, .search.submit:hover {
   background-color: #9f5505;
 }
 
@@ -106,7 +108,7 @@ body {
     border-radius: 5px;
 
     border: 0; /* so no border actually shows - just to round the text input */
-    width: 200px;
+    width: 98%;
   
 }
 

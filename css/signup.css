@@ -1,27 +1,30 @@
 /* OVERALL */
-
+/* we need to set the body to be flexbox to center responsively */
 body {
   background-color: rgb(237, 233, 233);
   margin: 5px;
+  
 }
 
 
-/* HEADER BUTTONS */
+.btn.group {
+  display: flex;
+  justify-content: flex-end; /* aligns buttons to the right */
+}
 .btn.group button {
   background-color: #b45f06; 
   border: 1px solid black; 
   color: white; 
   padding: 10px 24px; 
   cursor: pointer; 
-  float: left; /* Float the buttons side by side */
-  position: relative;
-  left: 76%;
-  font-size: 25px;
+
+  font-size: 20px;
 }
 
 .btn.group button:not(:last-child) {
   border-right: none; /* stop double borders */
 }
+
 /* set the rounded boarders of the buttons by adjusting the left-most and right-most */
 .btn.group button:nth-child(3) {
   border-top-right-radius: 3px;
@@ -41,7 +44,7 @@ body {
 }
 
 /* background hover */
-.btn button:hover {
+.btn button:hover, .search.submit:hover {
   background-color: #9f5505;
 }
 
@@ -58,7 +61,46 @@ body {
 }
 
 
-/* the submit button */
+#signup_container {
+  max-width: 25%; /* i don't want it any bigger tham this */
+  min-width: 250px;  /* the container won't get too small that inputs cannot be read, now. */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-size: 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 100px;
+  margin-left: 38%;
+  box-shadow: 10px 10px 0px 1px #b45f06;
+
+  overflow: hidden; /* if there is ever overflow, it won't show */
+  align-items: center; 
+}
+
+
+.signup.input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.signup.input input {
+  color: #979797;
+  height: 28px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup.input.state {
+  margin-top: -10%
+}
+
 .signup button {
   background-color: #b45f06; 
   border: 1px solid black; 
@@ -67,50 +109,16 @@ body {
   padding: 10px 24px; 
   cursor: pointer; 
   font-size: 20px;
+  width: 100%;
 
-  display: block;           
-  margin: 20px auto 0 auto;
-  width: 75%;
- 
+  align-self: center;
+  margin-top: auto;
+  margin-left: -50%;
+  text-align: center;
+
 }
 
 .signup button:hover {
   background-color: #9f5505;
-}
-
-/* the username/pword */
-
-.signup.container {
-  width: 25%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 25px;
-
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 100px;
-
-  box-shadow: 10px 10px 0px 1px #b45f06;
-}
-
-.signup.input {
-  margin-bottom: 10%;
-}
-
-.signup.input input {
-    color: #979797;
-    height: 28px;
-    padding-left: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-
-    border: 1px solid black; /* so no border actually shows - just to round the text input */
-    width: 175px;
-  
-}
-
-.signup.input #zip {
-  width: 100px;
 }
 

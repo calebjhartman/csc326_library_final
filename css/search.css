@@ -4,24 +4,30 @@ body {
     background-color: rgb(237, 233, 233);
     margin: 5px;
   }
+
   
-  
+
+
   /* HEADER BUTTONS */
+
+  .btn.group {
+    display: flex;
+    justify-content: flex-end; /* aligns buttons to the right */
+  }
   .btn.group button {
     background-color: #b45f06; 
     border: 1px solid black; 
     color: white; 
     padding: 10px 24px; 
     cursor: pointer; 
-    float: left; /* Float the buttons side by side */
-    position: relative;
-    left: 76%;
-    font-size: 25px;
+ 
+    font-size: 20px;
   }
-  
+
   .btn.group button:not(:last-child) {
     border-right: none; /* stop double borders */
   }
+
   /* set the rounded boarders of the buttons by adjusting the left-most and right-most */
   .btn.group button:nth-child(3) {
     border-top-right-radius: 3px;
@@ -41,7 +47,170 @@ body {
   }
   
   /* background hover */
-  .btn button:hover {
+  .btn button:hover, .search.submit:hover {
     background-color: #9f5505;
   }
   
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 10px
+  }
+  
+ /* use this to adjust the size of every element *individually* */
+  .search.title     { flex: 0 0 auto; }
+  .search.input     { flex: 1; }
+  .search.type,
+  .search.genre     { flex: 0 0 100px; }
+  .search.submit    { flex: 0 0 100px; }
+  
+  /* set the select class and input's style*/
+  .search select,
+  .search input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  /* height of the input and its color */
+  .search.input input {
+    height: 28px;
+    padding-left: 10px;
+    color: #979797;
+  }
+  
+  /* the submit button */
+  .search.submit {
+    align-self: flex-start;  /* Aligns it to the top */
+    background-color: #b45f06;
+    border: 1px solid black;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    min-height: 50px;  
+  }
+/* set the height of the selects so they actually show and don't hide */
+.search.type select,
+.search.genre select {
+  height: auto;             
+  min-height: 100px;        
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+/* BOOKS */
+
+.book {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
+
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+
+/* when the screen size gets too small, we need to push down the books below to avoid overlap with the summary and the book's image */
+@media (max-width: 600px) {
+  .book{
+    margin-top: 5%;      
+  }
+
+}
+
+.book.plus {
+  display: flex;
+  width: auto;
+  align-items: center;
+  
+}
+
+.book.plus img {
+  height: 50px;
+  /* don't forget to set the color of this */
+  cursor: pointer;
+  transform: translateY(.30in);
+  
+
+}
+
+.book.image {
+  vertical-align: top;
+  display: inline-block;
+  /* horizontally center images and caption */
+  text-align: center;
+  width: 120px;
+  height: 120px; /* matches the book image, so it'll be vertically aligned */
+  
+}
+
+.book.image img {
+  height: 120px;
+  width: auto;
+  border: 1px solid black;
+}
+
+
+.book.image.caption {
+  display: block;
+  margin-left: 15%;
+  
+}
+
+.book.info {
+  display: inline-block;
+  position: relative;  
+  margin-left: 10px;
+  width: 200px;  /* Set a fixed width to stop it from shrinking too much */
+  height: 120px;  /* Set a fixed height to stop movement as the page size changes */
+}
+
+/* slide the author and type slightly to align with the image; no need to use flex because the image and other relative attributes
+are not/do not need to be responsive */
+.book.info.author {
+  transform: translateY(-1.25in);
+}
+
+.book.info.type {
+  margin-left: 20px;
+  transform: translateY(-.55in);
+}
+
+/* position the summary to the right of the img/info and wrap the text so it fits on the screen as size changes */
+.book.info.summary{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+ 
+  font-size: 1em;
+  color: #333;
+
+  min-width: 60%;
+  max-width: 75%;
+
+  overflow: visible;
+  text-overflow: unset;
+  white-space: normal;
+  flex-wrap: wrap;
+}
+
+/* have the summary fill the entire flex box and be justified left */
+.book.info.summary span {
+  text-align: left;
+  flex: 1;
+
+}
